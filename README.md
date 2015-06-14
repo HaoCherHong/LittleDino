@@ -1,4 +1,4 @@
-# Little-Dino
+# LittleDino
 Make your chrome dinosaur crazy!!
 
 第八次黑客松台灣 - Javascript自動控制Chrome小恐龍
