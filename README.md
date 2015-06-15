@@ -9,11 +9,11 @@ https://www.youtube.com/watch?v=T82g-VHqXh4&feature=youtu.be
 # Usage
 斷開你的網路，嘗試連上一個網頁，召喚Chrome小恐龍！
 
-將 encoded_url.txt 的內容選取拖曳到書籤列
+將 [encoded_url.txt](https://raw.githubusercontent.com/HaoCherHong/LittleDino/master/encoded_url.txt) 的內容選取拖曳到書籤列
 點擊連結，並按空白鍵開始！
 
 # Compile
-使用 http://meyerweb.com/eric/tools/dencoder/ 壓縮 littledino.js 並在開頭加上 **javascript:** (包含冒號)
+使用 http://meyerweb.com/eric/tools/dencoder/ 壓縮 [littledino.js](https://raw.githubusercontent.com/HaoCherHong/LittleDino/master/littledino.js) 並在開頭加上 **javascript:** (包含冒號)
 
 # Contrubute
 我們需要找到在連網的狀態召喚小恐龍的方式，希望大家可以幫忙找找，提出Pull Request
