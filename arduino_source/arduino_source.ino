@@ -1,13 +1,13 @@
 /* 
 Arduino code by LangChuan Huang
 2015-06-13 Hackathon Taiwan
-Connect three LED (+) pin to Arduino pin 8 9 10
+Connect three LED (+) pin to Arduino pin 8 9 10 , LED (-) pin connect resistor to GND
 */
 
 char input[8];
 int n = 0;
 
-void setup() 
+void setup()
 {
   Serial.begin(9600);
   pinMode(8, OUTPUT);
@@ -17,7 +17,7 @@ void setup()
 
 void loop() 
 {
-  if (Serial.available() > 0) 
+  if (Serial.available() > 0)
   {
     if(n == 0)
     {
@@ -25,32 +25,31 @@ void loop()
       n++;
     }
     else
-    {      
+    {
       input[n] = Serial.read();
       if(input[n] == 'Z')
       {
         int time = 0;
-        for(int i = 1; i < strlen(input) - 1; i++)
+        for(int i = 1; i < n; i++)
         {
-          time += (input[i] - '0') * pow(10, strlen(input) - i - 2);
+          time += (input[i] - '0') * pow(10, n - i - 1);
         }
-        input[n+1] = '\0';
         if(input[0] == 'A') 
-        {          
-          digitalWrite(8, HIGH); 
-          delay(time); 
+        {
+          digitalWrite(8, HIGH);
+          delay(time);
           digitalWrite(8, LOW);
         }
         else if(input[0] == 'B')
         {
-          digitalWrite(9, HIGH); 
-          delay(time); 
+          digitalWrite(9, HIGH);
+          delay(time);
           digitalWrite(9, LOW);
         }
         else if(input[0] == 'C')
         {
-          digitalWrite(10, HIGH); 
-          delay(time); 
+          digitalWrite(10, HIGH);
+          delay(time);
           digitalWrite(10, LOW);
         }
         n = 0;
